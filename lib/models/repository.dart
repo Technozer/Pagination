@@ -2,8 +2,6 @@ import 'package:copy_with_extension/copy_with_extension.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:equatable/equatable.dart';
 
-part 'repository.g.dart';
-
 @CopyWith()
 @JsonSerializable(fieldRename: FieldRename.none)
 class RepositoryModel extends Equatable {
@@ -20,8 +18,8 @@ class RepositoryModel extends Equatable {
   @override
   List<Object> get props => [id, name, viewerHasStarred];
 
-  static RepositoryModel fromJson(Map<String, dynamic> json) =>
-      _$RepositoryModelFromJson(json);
+  static RepositoryModel? fromJson(Map<String, dynamic> json) =>
+      // _$RepositoryModelFromJson(json);
 
-  Map<String, dynamic> toJson() => _$RepositoryModelToJson(this);
+  // Map<String, dynamic>? toJson() => _$RepositoryModelToJson(this);
 }

@@ -15,6 +15,8 @@ class DatabaseRepository {
 
   final GraphQLService _service;
 
+  get kDatabaseUserId => null;
+
   Future<List<TodoModel>> readTodos(
       {DateTime? createdAt, required int limit}) async {
     return _service.query(
